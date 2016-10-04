@@ -22,7 +22,7 @@ enum Direction {
     case left
     case right
 
-    var excited: String {
+    var exited: String {
         switch self {
         case .up:
             return "UP"
@@ -33,18 +33,25 @@ enum Direction {
         case .right:
             return "RIGHT"
         }
+    
     }
 }
 
 let direction1 = Direction.up
 let direction2: Direction = .down
 var direction3: Direction = .right
+var direction4: Direction = .left
 
 let direction = Direction.left
 
 func playerDidMove(_ direction: Direction) {
-    print("Player moved \(direction.excited)")
+    print("Player moved \(direction.exited)")
 }
+playerDidMove(.left)
+
+//func playerDidMove(_ direction: Direction) {
+//    print("Player moved \(direction.excited)")
+//}
 
 playerDidMove(direction1)
 playerDidMove(direction2)
